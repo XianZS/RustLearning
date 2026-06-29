@@ -1,0 +1,18 @@
+D:\code\rust_item\RustLearning\1_learn\rs002>cargo run
+   Compiling rs002 v0.1.0 (D:\code\rust_item\RustLearning\1_learn\rs002)
+error[E0384]: cannot assign twice to immutable variable `x`
+  --> src\main.rs:10:5
+   |
+ 8 |     let x = 5;
+   |         - first assignment to `x`
+ 9 |     println!("The value of x is {}.", x);
+10 |     x = 6; // 此处代码会报错
+   |     ^^^^^ cannot assign twice to immutable variable
+   |
+help: consider making this binding mutable
+   |
+ 8 |     let mut x = 5;
+   |         +++
+
+For more information about this error, try `rustc --explain E0384`.
+error: could not compile `rs002` (bin "rs002") due to 1 previous error
